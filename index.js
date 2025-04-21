@@ -19,7 +19,8 @@ async function fetchGamesOfTheDay() {
             }
         });
         const today = new Date().toISOString().split('T')[0];
-        return response.data.filter(match => match.date === today);
+        console.log('TODOS OS JOGOS RETORNADOS:', response.data);
+return response.data;
     } catch (error) {
         console.error('Erro ao buscar jogos do dia:', error);
         return [];
